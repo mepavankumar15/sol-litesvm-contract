@@ -30,7 +30,7 @@ test("one transfer", () => {
 	const tx = new Transaction();
 	tx.recentBlockhash = blockhash;
 	tx.add(...ixs);
-	tx.sign(payer);
+	tx.sign(payer ,dataAccount);
 	svm.sendTransaction(tx);
 	const balanceAfter = svm.getBalance(dataAccount.publicKey);
 	expect(balanceAfter).toBe(svm.minimumBalanceForRentExemption(BigInt(4)));
