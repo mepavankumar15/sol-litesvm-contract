@@ -4,12 +4,10 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "litesvm": "^0.3.3"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "litesvm": "^0.2.0"
   }
 }
