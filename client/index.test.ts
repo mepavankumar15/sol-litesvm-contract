@@ -29,6 +29,7 @@ test("one transfer", () => {
 	];
 	const tx = new Transaction();
 	tx.recentBlockhash = blockhash;
+	tx.feePayer = payer.publicKey;
 	tx.add(...ixs);
 	tx.sign(payer ,dataAccount);
 	svm.sendTransaction(tx);
